@@ -14,10 +14,11 @@ body {
   background-color: #1A1924;
   font-size: 1.6rem;
   color: #E1E1E6;
+  height: 100vh;
+  overflow: hidden;
 }
 
 body * {
-  border: 0.1rem solid lightgreen;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -27,6 +28,8 @@ body * {
   width: 100vw;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
+  max-width: 800px;
+  margin: auto;
 }
 
 #top {
@@ -42,14 +45,14 @@ body * {
 }
 
 #user-info img {
-  width: 48px;
-  height: 48px;
+  width: 4.8rem;
+  height: 4.8rem;
   object-fit: cover;
   border-radius: 50%;
 }
 
 
-#user-status .status{
+#user-status .status {
   display: flex;
   align-items: baseline;
   gap: 0.4rem;
@@ -67,4 +70,93 @@ body * {
 
 #user-status .status {
   color: #00B37E;
+  font-size: 1.2rem;
+}
+
+#last-seen {
+  font-size: 1.2rem;
+  margin-top: 2.6rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+
+#messages {
+  overflow-y: scroll;
+  padding-bottom: 2.4rem;
+}
+
+#messages::-webkit-scrollbar {
+  display: none;
+}
+
+#messages::-webkit-scrollbar {
+  display: noe;
+}
+
+.messages {
+  margin-top: 3rem;
+  display: grid;
+  gap: 3rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+
+}
+
+.message .body {
+  margin-top: 1rem;
+  background-color: #633BBC;
+  padding: 1.4rem;
+  border-radius: 0 .8rem .8rem .8rem;
+  width: fit-content;
+}
+
+.message:not(.you) {
+  width: 40vw;
+}
+
+.message.you {
+  margin-left: auto;
+}
+
+.message.you .top {
+  text-align: right;
+}
+
+.message.you .body {
+  background-color: #07847E;
+  border-radius: .8rem .8rem 0 .8rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  border-radius: 999rem;
+  padding: 1.4rem;
+  background: #282843;
+}
+
+input {
+  flex: 1;
+  outline: none;
+  color: white;
+}
+
+form:focus-within {
+  outline: 2px solid white;
+}
+
+input::placeholder {
+  color: #E1E1E6;
+  font-size: 1.2rem;
+}
+
+button i {
+  color: #E1E1E6;
+  font-size: 2.4rem;
+}
+
+input,
+button {
+  background-color: transparent;
+  border: 0;
 }
