@@ -2,14 +2,51 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desafio 7 - Carnaval</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <title>Encontre seu bloco no carnaval</title>
 </head>
 
 <body>
-  <h1>desafio 7</h1>
+
+  <header>
+    <div class="content">
+      <div class="top">
+        <p>find your block</p>
+        <h1>Encontre os <span>melhores blocos</span> de canaval 2023</h1>
+      </div>
+
+      <form class="search">
+        <div class="search-field">
+          <label for="name">Pesquise por nome</label>
+          <i class="ph-light ph-magnifying-glass"></i>
+          <input type="text" id="name" name="name" />
+        </div>
+
+        <div class="search-field">
+          <label for="city">Selecione uma cidade</label>
+          <i class="ph-light ph-map-pin"></i>
+          <select name="city" id="city">
+            <option value="0" selected>Selecione sua cidade</option>
+
+            <option value="REC">Recife</option>
+            <option value="PNZ">Petrolina</option>
+            <option value="JUZ">Juazeiro</option>
+          </select>
+          <i class="ph-light ph-caret-down"></i>
+        </div>
+
+        <button>Buscar agora</button>
+      </form>
+
+    </div>
+  </header>
 </body>
 
 </html>
