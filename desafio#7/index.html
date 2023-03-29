@@ -24,25 +24,29 @@
 
       <form class="search">
         <div class="search-field">
-          <label for="name">Pesquise por nome</label>
-          <i class="ph-light ph-magnifying-glass"></i>
-          <input type="text" id="name" name="name" />
+          <label class="sr-only" for="name">Pesquise por nome</label>
+         <i class="ph-light ph-magnifying-glass"></i>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Pesquise por nome"
+          />
         </div>
 
-        <div class="search-field">
-          <label for="city">Selecione uma cidade</label>
-          <i class="ph-light ph-map-pin"></i>
+        <div class="search-field select">
+          <label class="sr-only" for="city">Selecione uma cidade</label>
+           <i class="ph-light ph-map-pin"></i>
           <select name="city" id="city">
             <option value="0" selected>Selecione sua cidade</option>
-
-            <option value="REC">Recife</option>
-            <option value="PNZ">Petrolina</option>
-            <option value="JUZ">Juazeiro</option>
+            <option value="sao-paulo">São Paulo</option>
+            <option value="rio-de-janeiro">Rio de Janeiro</option>
+            <option value="salvador">Salvador</option>
           </select>
           <i class="ph-light ph-caret-down"></i>
         </div>
-
-        <button>Buscar agora</button>
+        
+        <button class="btn primary">Buscar agora</button>
       </form>
 
     </div>
