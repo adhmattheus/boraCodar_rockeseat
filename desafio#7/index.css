@@ -23,6 +23,40 @@
   border-width: 0;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.4rem 2.4rem;
+  border-radius: 0.5rem;
+}
+
+.primary {
+  background: #6246EA;
+  border-radius: 0.5rem;
+  color: white;
+  transition: background 200ms;
+}
+
+.primary:hover {
+  background: #3d1aef;
+  color: white;
+}
+
+.secondary {
+  color: #6246EA;
+}
+
+.secondary:hover {
+  background-color: #6246EA;
+  color: white;
+}
+
 body {
   font-size: 1.6rem;
 }
@@ -139,19 +173,124 @@ select,
   position: relative;
 }
 
+select {
+  z-index: 1;
+}
+
+.select i.ph-light ph-caret-down {
+  position: absolute;
+  right: 1rem;
+  z-index: 0;
+  color: #858793;
+}
+
 form button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1.2rem 3.2rem;
-  gap: 0.8rem;
+}
 
-  background: #6246EA;
-  border-radius: 0.5rem;
-  cursor: pointer;
+main>.content {
+  max-width: 1200px;
+  margin: 10rem auto;
+}
 
-  font-size: 1.4rem;
-  line-height: 2.rem;
-  text-transform: uppercase;
-  color: #FFFFFF;
+section.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.top .view {
+  display: flex;
+  padding: 8px;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  gap: 2px;
+}
+
+section.cards {
+  margin-top: 4.8rem;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 1rem;
+  max-width: 38.4rem;
+  overflow: hidden;
+}
+
+.card .content {
+  gap: 1.6rem;
+  display: grid;
+  padding: 1.6rem;
+}
+
+.card h3 {
+  color: #121214;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.card p {
+  opacity: 0.75;
+}
+
+
+.card .location {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.location i {
+  color: #e45858;
+  font-size: 2.4rem;
+}
+
+main {
+  padding-inline: 4rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+
+  header::before {
+    background-size: 30vw;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 870px) {
+  header .content {
+    padding: 4rem;
+  }
+
+  header form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 660px) {
+  section.cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  section.cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    width: 100%;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
 }
